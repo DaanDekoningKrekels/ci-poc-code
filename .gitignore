@@ -1,0 +1,15 @@
+.atmel-start-backup
+ci-poc-code.X
+
+#Build Directories
+[Dd]ebug/
+[Rr]elease/
+
+#Build Results
+*.o
+*.d
+*.eep
+*.elf
+*.hex
+*.map
+*.srec
