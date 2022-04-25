@@ -3,7 +3,9 @@
 
 #include "UART0.h"
 #include "UART2.h"
+#include "UART3.h"
 #include "RN2483.h"
+#include "driver_examples.h"
 
 int main(void)
 {
@@ -11,23 +13,21 @@ int main(void)
 	atmel_start_init();
 	UART0_init();
 	UART2_init();
-	
-	UART2_write("Opgestart!\n");
+	UART3_init();
 	RN2483_init();
-	UART0_write("sys reset\r\n");
-	delay_ms(500);
-	UART0_write("sys get hweui\r\n");
-	delay_ms(100);
-	UART0_write("sys get ver\r\n");
-	delay_ms(100);
-	RN2483_reset_band("868");
-	delay_ms(100);
-	RN2483_mac_set();
-	delay_ms(100);
+	
+	UART2_write("Start up!\n");
+	delay_ms(200);
+	
+	//RN2483_mac_set();
+	//delay_ms(500);
+	
+	RN2483_join();
+	delay_ms(200);
+	
 	/* Replace with your application code */
 	while (1) {
-		RN2483_join();
 		delay_ms(3000);
+		RN2483_send(0b11001010);
 	}
 }
-

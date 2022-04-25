@@ -15,13 +15,24 @@
 
 #include <hpl_adc_base.h>
 
+/*! The buffer size for USART */
+#define USART_0_BUFFER_SIZE 16
+
+/*! The buffer size for USART */
+#define USART_2_BUFFER_SIZE 16
+
+/*! The buffer size for USART */
+#define USART_3_BUFFER_SIZE 16
+
+struct usart_async_descriptor USART_0;
+struct usart_async_descriptor USART_2;
+struct usart_async_descriptor USART_3;
+
+static uint8_t USART_0_buffer[USART_0_BUFFER_SIZE];
+static uint8_t USART_2_buffer[USART_2_BUFFER_SIZE];
+static uint8_t USART_3_buffer[USART_3_BUFFER_SIZE];
+
 struct adc_sync_descriptor ADC_0;
-
-struct usart_sync_descriptor USART_0;
-
-struct usart_sync_descriptor USART_2;
-
-struct usart_sync_descriptor USART_3;
 
 struct i2c_m_sync_desc I2C_0;
 
@@ -51,7 +62,24 @@ void ADC_0_init(void)
 	adc_sync_init(&ADC_0, ADC, (void *)NULL);
 }
 
-void USART_0_PORT_init(void)
+/**
+ * \brief USART Clock initialization function
+ *
+ * Enables register interface and peripheral clock
+ */
+void USART_0_CLOCK_init()
+{
+
+	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM0);
+	_gclk_enable_channel(SERCOM0_GCLK_ID_CORE, CONF_GCLK_SERCOM0_CORE_SRC);
+}
+
+/**
+ * \brief USART pinmux initialization function
+ *
+ * Set each required pin to USART functionality
+ */
+void USART_0_PORT_init()
 {
 
 	gpio_set_pin_function(PA04, PINMUX_PA04D_SERCOM0_PAD0);
@@ -59,20 +87,36 @@ void USART_0_PORT_init(void)
 	gpio_set_pin_function(PA05, PINMUX_PA05D_SERCOM0_PAD1);
 }
 
-void USART_0_CLOCK_init(void)
-{
-	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM0);
-	_gclk_enable_channel(SERCOM0_GCLK_ID_CORE, CONF_GCLK_SERCOM0_CORE_SRC);
-}
-
+/**
+ * \brief USART initialization function
+ *
+ * Enables USART peripheral, clocks and initializes USART driver
+ */
 void USART_0_init(void)
 {
 	USART_0_CLOCK_init();
-	usart_sync_init(&USART_0, SERCOM0, (void *)NULL);
+	usart_async_init(&USART_0, SERCOM0, USART_0_buffer, USART_0_BUFFER_SIZE, (void *)NULL);
 	USART_0_PORT_init();
 }
 
-void USART_2_PORT_init(void)
+/**
+ * \brief USART Clock initialization function
+ *
+ * Enables register interface and peripheral clock
+ */
+void USART_2_CLOCK_init()
+{
+
+	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM2);
+	_gclk_enable_channel(SERCOM2_GCLK_ID_CORE, CONF_GCLK_SERCOM2_CORE_SRC);
+}
+
+/**
+ * \brief USART pinmux initialization function
+ *
+ * Set each required pin to USART functionality
+ */
+void USART_2_PORT_init()
 {
 
 	gpio_set_pin_function(PA08, PINMUX_PA08D_SERCOM2_PAD0);
@@ -80,20 +124,36 @@ void USART_2_PORT_init(void)
 	gpio_set_pin_function(PA09, PINMUX_PA09D_SERCOM2_PAD1);
 }
 
-void USART_2_CLOCK_init(void)
-{
-	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM2);
-	_gclk_enable_channel(SERCOM2_GCLK_ID_CORE, CONF_GCLK_SERCOM2_CORE_SRC);
-}
-
+/**
+ * \brief USART initialization function
+ *
+ * Enables USART peripheral, clocks and initializes USART driver
+ */
 void USART_2_init(void)
 {
 	USART_2_CLOCK_init();
-	usart_sync_init(&USART_2, SERCOM2, (void *)NULL);
+	usart_async_init(&USART_2, SERCOM2, USART_2_buffer, USART_2_BUFFER_SIZE, (void *)NULL);
 	USART_2_PORT_init();
 }
 
-void USART_3_PORT_init(void)
+/**
+ * \brief USART Clock initialization function
+ *
+ * Enables register interface and peripheral clock
+ */
+void USART_3_CLOCK_init()
+{
+
+	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM3);
+	_gclk_enable_channel(SERCOM3_GCLK_ID_CORE, CONF_GCLK_SERCOM3_CORE_SRC);
+}
+
+/**
+ * \brief USART pinmux initialization function
+ *
+ * Set each required pin to USART functionality
+ */
+void USART_3_PORT_init()
 {
 
 	gpio_set_pin_function(PA16, PINMUX_PA16D_SERCOM3_PAD0);
@@ -101,16 +161,15 @@ void USART_3_PORT_init(void)
 	gpio_set_pin_function(PA17, PINMUX_PA17D_SERCOM3_PAD1);
 }
 
-void USART_3_CLOCK_init(void)
-{
-	_pm_enable_bus_clock(PM_BUS_APBC, SERCOM3);
-	_gclk_enable_channel(SERCOM3_GCLK_ID_CORE, CONF_GCLK_SERCOM3_CORE_SRC);
-}
-
+/**
+ * \brief USART initialization function
+ *
+ * Enables USART peripheral, clocks and initializes USART driver
+ */
 void USART_3_init(void)
 {
 	USART_3_CLOCK_init();
-	usart_sync_init(&USART_3, SERCOM3, (void *)NULL);
+	usart_async_init(&USART_3, SERCOM3, USART_3_buffer, USART_3_BUFFER_SIZE, (void *)NULL);
 	USART_3_PORT_init();
 }
 
@@ -206,9 +265,7 @@ void system_init(void)
 	ADC_0_init();
 
 	USART_0_init();
-
 	USART_2_init();
-
 	USART_3_init();
 
 	I2C_0_init();

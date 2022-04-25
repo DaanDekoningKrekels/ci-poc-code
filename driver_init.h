@@ -23,11 +23,9 @@ extern "C" {
 
 #include <hal_adc_sync.h>
 
-#include <hal_usart_sync.h>
-
-#include <hal_usart_sync.h>
-
-#include <hal_usart_sync.h>
+#include <hal_usart_async.h>
+#include <hal_usart_async.h>
+#include <hal_usart_async.h>
 
 #include <hal_i2c_m_sync.h>
 
@@ -35,13 +33,10 @@ extern "C" {
 
 #include <hal_wdt.h>
 
-extern struct adc_sync_descriptor ADC_0;
-
-extern struct usart_sync_descriptor USART_0;
-
-extern struct usart_sync_descriptor USART_2;
-
-extern struct usart_sync_descriptor USART_3;
+extern struct adc_sync_descriptor    ADC_0;
+extern struct usart_async_descriptor USART_0;
+extern struct usart_async_descriptor USART_2;
+extern struct usart_async_descriptor USART_3;
 
 extern struct i2c_m_sync_desc I2C_0;
 

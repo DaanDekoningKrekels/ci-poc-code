@@ -1,5 +1,5 @@
 format_version: '2'
-name: My Project
+name: Connected Islands Board
 versions:
   api: '1.0'
   backend: 1.8.580
@@ -205,9 +205,9 @@ drivers:
         configuration: {}
   USART_0:
     user_label: USART_0
-    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM0::driver_config_definition::UART::HAL:Driver:USART.Sync
+    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM0::driver_config_definition::UART::HAL:Driver:USART.Async
     functionality: USART
-    api: HAL:Driver:USART_Sync
+    api: HAL:Driver:USART_Async
     configuration:
       usart_advanced: false
       usart_arch_clock_mode: USART with internal clock
@@ -254,9 +254,9 @@ drivers:
           slow_gclk_selection: Generic clock generator 0
   USART_2:
     user_label: USART_2
-    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM2::driver_config_definition::UART::HAL:Driver:USART.Sync
+    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM2::driver_config_definition::UART::HAL:Driver:USART.Async
     functionality: USART
-    api: HAL:Driver:USART_Sync
+    api: HAL:Driver:USART_Async
     configuration:
       usart_advanced: false
       usart_arch_clock_mode: USART with internal clock
@@ -303,9 +303,9 @@ drivers:
           slow_gclk_selection: Generic clock generator 0
   USART_3:
     user_label: USART_3
-    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM3::driver_config_definition::UART::HAL:Driver:USART.Sync
+    definition: Atmel:SAMD21C_Drivers:0.0.1::SAMD21G16B-AF::SERCOM3::driver_config_definition::UART::HAL:Driver:USART.Async
     functionality: USART
-    api: HAL:Driver:USART_Sync
+    api: HAL:Driver:USART_Async
     configuration:
       usart_advanced: false
       usart_arch_clock_mode: USART with internal clock

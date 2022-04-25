@@ -93,9 +93,11 @@
           <AcmeProjectActionInfo Action="File" Source="hal/utils/include/utils_increment_macro.h" IsConfig="false" Hash="yV2DDykoVCXX+XgiNyG+Sw" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/include/utils_list.h" IsConfig="false" Hash="60r34J7DkHyqgr2iqa6aXg" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/include/utils_repeat_macro.h" IsConfig="false" Hash="yidXppbw9HriaIIl6gVfEQ" />
+          <AcmeProjectActionInfo Action="File" Source="hal/utils/include/utils_ringbuffer.h" IsConfig="false" Hash="H/Lfgr8Y95zCUmEfoJAavQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/src/utils_assert.c" IsConfig="false" Hash="858+H2i44SFMGhFZ4+PSPw" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/src/utils_event.c" IsConfig="false" Hash="sR2eRthblYjlO/jHulP6aw" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/src/utils_list.c" IsConfig="false" Hash="rW6uwWgOnnMWzJjuYzxzZw" />
+          <AcmeProjectActionInfo Action="File" Source="hal/utils/src/utils_ringbuffer.c" IsConfig="false" Hash="MBhQOsuapWaZGq/1E6lcTw" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/src/utils_syscalls.c" IsConfig="false" Hash="NaBnZufa6Sau3+tzlyR7Kw" />
           <AcmeProjectActionInfo Action="File" Source="hri/hri_ac_d21c.h" IsConfig="false" Hash="9Ps0jVKdtkkerRgkrQWuXQ" />
           <AcmeProjectActionInfo Action="File" Source="hri/hri_adc_d21c.h" IsConfig="false" Hash="g2eOwFgHDKwNms+pxuxLhw" />
@@ -124,12 +126,13 @@
           <AcmeProjectActionInfo Action="File" Source="hri/hri_usb_d21c.h" IsConfig="false" Hash="n0d0rV7VIsleZKFeYaTJsw" />
           <AcmeProjectActionInfo Action="File" Source="hri/hri_wdt_d21c.h" IsConfig="false" Hash="HX0C3xd3M83wgfQmgRVHYg" />
           <AcmeProjectActionInfo Action="File" Source="main.c" IsConfig="false" Hash="k0AH7j+BrmdFhBPzCCMptA" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="ZOKGz65jBnUJH+ePLgf0fg" />
-          <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="gIPD5uu3WQgdJw0cos4huQ" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="/17tKwPFFpg2cBCt3xEULA" />
+          <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="Vm+e/bv5e1d3Ohqq3V2McQ" />
           <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="vvfi9HviDaPC/hjJAgixgw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.h" IsConfig="false" Hash="rZbgiDYCViwvn6bTN7D7Hw" />
-          <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="t8B4NdO9GIs302u2WNWfEw" />
+          <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="6Hh2f38fiYcDcWL9NocLRA" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_adc_sync.h" IsConfig="false" Hash="ez1X5T9kpYwT+1+5x4Pxqg" />
+          <AcmeProjectActionInfo Action="File" Source="hal/include/hal_usart_async.h" IsConfig="false" Hash="km9RyrLcCSavva/oZ2rcOQ" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_usart_sync.h" IsConfig="false" Hash="ZzIGSRyjZuxRzFAtNNt7sw" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hpl_adc_async.h" IsConfig="false" Hash="kKbVmqgGDUkuWZYErBwgVA" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hpl_adc_sync.h" IsConfig="false" Hash="dCWrizZn0RtcCM73jZ/k6A" />
@@ -143,6 +146,7 @@
           <AcmeProjectActionInfo Action="File" Source="hal/include/hpl_usart_async.h" IsConfig="false" Hash="tBfmk3BN3Q1WbYVoWDbsJw" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hpl_usart_sync.h" IsConfig="false" Hash="Yj+PoPxG2CqDOy5XoIWkwg" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_adc_sync.c" IsConfig="false" Hash="g0MT/8E9mrmMV9tMAyu/aQ" />
+          <AcmeProjectActionInfo Action="File" Source="hal/src/hal_usart_async.c" IsConfig="false" Hash="1BPdzHEU8u472rtyf6cIdg" />
           <AcmeProjectActionInfo Action="File" Source="hal/src/hal_usart_sync.c" IsConfig="false" Hash="VBVlAmBFEYTTUMHeIRFSxg" />
           <AcmeProjectActionInfo Action="File" Source="hal/utils/include/parts.h" IsConfig="false" Hash="0b8yK5VF9KwDaYDr4aTCpg" />
           <AcmeProjectActionInfo Action="File" Source="hpl/adc/hpl_adc.c" IsConfig="false" Hash="n3W3Y8dfMdyntJXO2X8GeQ" />
@@ -156,7 +160,7 @@
           <AcmeProjectActionInfo Action="File" Source="hpl/pm/hpl_pm.c" IsConfig="false" Hash="R3wV7M4HtYcRCNz6RQOhCw" />
           <AcmeProjectActionInfo Action="File" Source="hpl/pm/hpl_pm_base.h" IsConfig="false" Hash="T2mwlja7rLI0u564Rgn0Dw" />
           <AcmeProjectActionInfo Action="File" Source="hpl/port/hpl_gpio_base.h" IsConfig="false" Hash="XsyO6HptLFNEGxGJG040Iw" />
-          <AcmeProjectActionInfo Action="File" Source="hpl/sercom/hpl_sercom.c" IsConfig="false" Hash="dr5LuevJbM4AXs6Wy7Dpsg" />
+          <AcmeProjectActionInfo Action="File" Source="hpl/sercom/hpl_sercom.c" IsConfig="false" Hash="yno8jePjjSkTvxOwwbQ9zw" />
           <AcmeProjectActionInfo Action="File" Source="hpl/sysctrl/hpl_sysctrl.c" IsConfig="false" Hash="d4wIg1swqGafMtp4ATkI2w" />
           <AcmeProjectActionInfo Action="File" Source="hpl/wdt/hpl_wdt.c" IsConfig="false" Hash="cyUihGSvkV7WL8KjKOKoGA" />
           <AcmeProjectActionInfo Action="File" Source="hpl/wdt/hpl_wdt_base.h" IsConfig="false" Hash="cYf18KazRj6YPAIVDHemBQ" />
@@ -419,9 +423,6 @@
     <Compile Include="Config\peripheral_clk_config.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Config\RTE_Components.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Device_Startup\startup_samd21.c">
       <SubType>compile</SubType>
     </Compile>
@@ -462,6 +463,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\include\hal_sleep.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\include\hal_usart_async.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\include\hal_usart_sync.h">
@@ -578,6 +582,9 @@
     <Compile Include="hal\src\hal_sleep.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="hal\src\hal_usart_async.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="hal\src\hal_usart_sync.c">
       <SubType>compile</SubType>
     </Compile>
@@ -614,6 +621,9 @@
     <Compile Include="hal\utils\include\utils_repeat_macro.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="hal\utils\include\utils_ringbuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="hal\utils\src\utils_assert.c">
       <SubType>compile</SubType>
     </Compile>
@@ -621,6 +631,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\utils\src\utils_list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="hal\utils\src\utils_ringbuffer.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal\utils\src\utils_syscalls.c">
@@ -749,6 +762,15 @@
     <Compile Include="hri\hri_wdt_d21c.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="UART3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UART3.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Config\RTE_Components.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -805,6 +827,9 @@
       <SubType>compile</SubType>
     </None>
     <None Include="hal\documentation\i2c_master_sync.rst">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="hal\documentation\usart_async.rst">
       <SubType>compile</SubType>
     </None>
     <None Include="hal\documentation\usart_sync.rst">
