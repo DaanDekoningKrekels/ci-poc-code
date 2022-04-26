@@ -6,11 +6,11 @@
  */ 
 
 
-#ifndef INCFILE1_H_
-#define INCFILE1_H_
+#ifndef UART3_H_
+#define UART3_H_
 
 void UART3_init(void);
 void UART3_write(const char *msg);
 void UART3_read(void);
 
-#endif /* INCFILE1_H_ */
+#endif /* UART3_H_ */

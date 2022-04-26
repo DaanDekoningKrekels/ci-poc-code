@@ -762,6 +762,12 @@
     <Compile Include="hri\hri_wdt_d21c.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="I2C.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="UART3.h">
       <SubType>compile</SubType>
     </Compile>

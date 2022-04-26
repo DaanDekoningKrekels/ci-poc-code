@@ -18,8 +18,6 @@
 #define DR 5
 #define ADR on
 
-bool joined = false;
-
 void RN2483_init(void)
 {
 	// Reset the RN2483

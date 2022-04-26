@@ -7,12 +7,12 @@
 #include "RN2483.h"
 #include "driver_examples.h"
 
-int main(void)
-{
+int main(void){
 	/* Initializes MCU, drivers and middleware */
 	atmel_start_init();
 	UART0_init();
 	UART2_init();
+	I2C_init();
 	UART3_init();
 	RN2483_init();
 	
@@ -22,12 +22,17 @@ int main(void)
 	//RN2483_mac_set();
 	//delay_ms(500);
 	
-	RN2483_join();
-	delay_ms(200);
-	
 	/* Replace with your application code */
 	while (1) {
+		RN2483_join();
+		delay_ms(200);
+		
 		delay_ms(3000);
-		RN2483_send(0b11001010);
+		UART2_write("data incoming\n");
+		delay_ms(100);
+		I2C_read();
+		delay_ms(100);
+		UART2_write("data finished\n");
+		delay_ms(100);
 	}
 }
