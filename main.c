@@ -18,16 +18,18 @@ int main(void){
 	
 	UART2_write("Start up!\n");
 	delay_ms(200);
+
+	RN2483_join();
+	delay_ms(200);
 	
+	//UART0_write("sys get hweui\r\n", 1);
+	//delay_ms(500);
 	//RN2483_mac_set();
 	//delay_ms(500);
 	
 	/* Replace with your application code */
-	while (1) {
-		RN2483_join();
-		delay_ms(200);
-		
-		delay_ms(3000);
+	while (1) {		
+		delay_ms(60000);
 		UART2_write("data incoming\n");
 		delay_ms(100);
 		I2C_read();

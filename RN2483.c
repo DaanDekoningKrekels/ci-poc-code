@@ -30,14 +30,14 @@ void RN2483_mac_set(void)
 {
 	UART0_write("mac reset 868\r\n", 1);
 	delay_ms(500);
-	UART2_write("mac set deveui 0004A30B0020F589\n"); // DEBUG
-	UART0_write("mac set deveui 0004A30B0020F589\r\n", 1); // TODO: get deveui from defined DEV_EUI;
+	UART2_write("mac set deveui 3004A30B0020F589\n"); // DEBUG
+	UART0_write("mac set deveui 3004A30B0020F589\r\n", 1); // TODO: get deveui from defined DEV_EUI;
 	delay_ms(500);
 	UART2_write("mac set appeui 0000000000000000\n"); // DEBUG
 	UART0_write("mac set appeui 0000000000000000\r\n", 1); // TODO: get appeui from defined APP_EUI;
 	delay_ms(500);
-	UART2_write("mac set appkey 9F96481D933BD01F8FDA414DADAE1B06\n"); // DEBUG
-	UART0_write("mac set appkey 9F96481D933BD01F8FDA414DADAE1B06\r\n", 1); // TODO: get appkey from defined APP_KEY;
+	UART2_write("mac set appkey 9643F6ED461630F9A6716C2B3529DA3B\n"); // DEBUG
+	UART0_write("mac set appkey 9643F6ED461630F9A6716C2B3529DA3B\r\n", 1); // TODO: get appkey from defined APP_KEY;
 	delay_ms(500);
 	UART2_write("mac set pwridx 1\n"); // DEBUG
 	UART0_write("mac set pwridx 1\r\n", 1); // TODO: get pwridx from defined PWRIDX;
